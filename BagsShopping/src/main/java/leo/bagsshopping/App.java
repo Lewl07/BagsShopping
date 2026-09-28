@@ -56,11 +56,13 @@ public class App extends Application {
         
         Button clearBtn = new Button("Clear");
         
-        HBox root = new HBox(10, smallBtn, mediumBtn, largeBtn, cbQuantity);
+        VBox root = new VBox();
+        HBox hbox = new HBox(10, smallBtn, mediumBtn, largeBtn, cbQuantity);
+        HBox selection = new HBox(10, orderBtn, clearBtn, orderSelection);
+        
         VBox vbox = new VBox(bagList);
-        
-        root.getChildren().addAll(vbox);
-        
+        root.getChildren().addAll(hbox, selection, vbox);
+
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
