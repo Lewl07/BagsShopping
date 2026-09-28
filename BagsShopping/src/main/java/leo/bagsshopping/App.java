@@ -26,7 +26,7 @@ public class App extends Application {
         bagList.setItems(FXCollections.observableArrayList(bags));
         
         ComboBox<Integer> cbQuantity = new ComboBox<Integer>();
-        
+        cbQuantity.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         
         Scene scene = new Scene(bagList);
         stage.setScene(scene);
