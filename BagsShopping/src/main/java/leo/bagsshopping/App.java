@@ -73,6 +73,8 @@ public class App extends Application {
         Button clearBtn = new Button("Clear");
         clearBtn.setOnAction(e -> {
             selection.setText("");
+            cbQuantity.setValue(null);
+            group.selectToggle(null);
         });
         
         VBox root = new VBox();
