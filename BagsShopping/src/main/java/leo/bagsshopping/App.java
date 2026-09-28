@@ -48,22 +48,25 @@ public class App extends Application {
         largeBtn.setToggleGroup(group);
         
         Button orderBtn = new Button("Order");
-        Label orderSelection = new Label();
+        Label selection = new Label();
         orderBtn.setOnAction(e -> {
-            orderSelection.setText("You chose");
+            
+            selection.setText("You chose");
         });
         
-        
         Button clearBtn = new Button("Clear");
+        clearBtn.setOnAction(e -> {
+            selection.setText("");
+        });
         
         VBox root = new VBox();
         HBox hbox = new HBox(10, smallBtn, mediumBtn, largeBtn, cbQuantity);
-        HBox selection = new HBox(10, orderBtn, clearBtn, orderSelection);
+        HBox selectionHb = new HBox(10, orderBtn, clearBtn, selection);
         
         VBox vbox = new VBox(bagList);
-        root.getChildren().addAll(hbox, selection, vbox);
+        root.getChildren().addAll(hbox, selectionHb, vbox);
 
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 600, 400);
         stage.setScene(scene);
         stage.show();
     }
