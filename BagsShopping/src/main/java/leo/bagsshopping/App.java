@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -44,6 +45,14 @@ public class App extends Application {
         
         RadioButton largeBtn = new RadioButton("Large");
         largeBtn.setToggleGroup(group);
+        
+        Button orderBtn = new Button("Order");
+        
+        
+        
+        
+        Button clearBtn = new Button("Clear");
+        
         
         VBox vbox = new VBox(bagList);
         HBox hbox = new HBox(10, smallBtn, mediumBtn, largeBtn);
