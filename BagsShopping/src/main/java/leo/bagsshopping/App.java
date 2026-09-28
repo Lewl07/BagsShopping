@@ -51,7 +51,23 @@ public class App extends Application {
         Button orderBtn = new Button("Order");
         Label selection = new Label();
         orderBtn.setOnAction(e -> {
-            selection.setText("You chose");
+            String size = "";
+            
+            if (smallBtn.isSelected()) {
+                size = "Small";
+            }
+            
+            if (mediumBtn.isSelected()) {
+                size = "Medium";
+            }
+            
+            if (largeBtn.isSelected()) {
+                size = "Large";
+            }
+            
+            selection.setText("You ordered " + cbQuantity.getValue() + " " +
+                    size + " " + bagList.getSelectionModel().getSelectedItem()
+                    + " " + "Bags.");
         });
         
         Button clearBtn = new Button("Clear");
