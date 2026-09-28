@@ -20,7 +20,7 @@ import javafx.stage.Stage;
  * JavaFX App
  *
  * @author Leo Ho 
- * Git repo: https://github.com/Lewl07/RestaurantMenu.git
+ * Git repo: https://github.com/Lewl07/BagsShopping.git
  */
 public class App extends Application {
 
