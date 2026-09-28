@@ -45,8 +45,8 @@ public class App extends Application {
         RadioButton largeBtn = new RadioButton("Large");
         largeBtn.setToggleGroup(group);
         
-        HBox hbox = new HBox(10, smallBtn, mediumBtn, largeBtn);
         VBox vbox = new VBox(bagList);
+        HBox hbox = new HBox(10, smallBtn, mediumBtn, largeBtn);
         
         hbox.getChildren().add(vbox);
         
