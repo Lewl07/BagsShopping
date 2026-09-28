@@ -2,6 +2,7 @@ package leo.bagsshopping;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
+import javafx.event.EventType;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -47,19 +48,20 @@ public class App extends Application {
         largeBtn.setToggleGroup(group);
         
         Button orderBtn = new Button("Order");
-        
-        
+        Label orderSelection = new Label();
+        orderBtn.setOnAction(e -> {
+            orderSelection.setText("You chose");
+        });
         
         
         Button clearBtn = new Button("Clear");
         
-        
+        HBox root = new HBox(10, smallBtn, mediumBtn, largeBtn, cbQuantity);
         VBox vbox = new VBox(bagList);
-        HBox hbox = new HBox(10, smallBtn, mediumBtn, largeBtn);
         
-        hbox.getChildren().add(vbox);
+        root.getChildren().addAll(vbox);
         
-        Scene scene = new Scene(hbox);
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
