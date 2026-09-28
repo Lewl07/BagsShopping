@@ -10,6 +10,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -42,6 +43,8 @@ public class App extends Application {
         
         RadioButton largeBtn = new RadioButton("Large");
         largeBtn.setToggleGroup(group);
+        
+        HBox hbox = new HBox(10, smallBtn, mediumBtn, largeBtn);
         
         Scene scene = new Scene(bagList);
         stage.setScene(scene);
