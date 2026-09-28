@@ -18,7 +18,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-        ListView lv = new ListView();
+        ListView<String> lv = new ListView<String>();
+        String[] bags = {"Full Decorative", "Beaded", "Pirate Design",
+            "Fringed", "Leather", "Plain"};
+        
         
         Scene scene = new Scene(lv);
         stage.setScene(scene);
