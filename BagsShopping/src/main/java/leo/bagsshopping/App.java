@@ -1,6 +1,7 @@
 package leo.bagsshopping;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -21,9 +22,10 @@ public class App extends Application {
         ListView<String> bagList = new ListView<String>();
         String[] bags = {"Full Decorative", "Beaded", "Pirate Design",
             "Fringed", "Leather", "Plain"};
+        bagList.setItems(FXCollections.observableArrayList(bags));
         
         
-        Scene scene = new Scene(lv);
+        Scene scene = new Scene(bagList);
         stage.setScene(scene);
         stage.show();
     }
