@@ -33,8 +33,9 @@ public class App extends Application {
             "Fringed", "Leather", "Plain"};
         bagList.setItems(FXCollections.observableArrayList(bags));
         
-        ComboBox<Integer> cbQuantity = new ComboBox<Integer>();
-        cbQuantity.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        ComboBox<String> cbQuantity = new ComboBox<String>();
+        cbQuantity.getItems().addAll("1", "2", "3", "4", "5", "6", "7", "8",
+                "9", "10");
         
         ToggleGroup group = new ToggleGroup();
         
@@ -50,7 +51,6 @@ public class App extends Application {
         Button orderBtn = new Button("Order");
         Label selection = new Label();
         orderBtn.setOnAction(e -> {
-            
             selection.setText("You chose");
         });
         
