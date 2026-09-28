@@ -18,7 +18,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-        ListView<String> lv = new ListView<String>();
+        ListView<String> bagList = new ListView<String>();
         String[] bags = {"Full Decorative", "Beaded", "Pirate Design",
             "Fringed", "Leather", "Plain"};
         
