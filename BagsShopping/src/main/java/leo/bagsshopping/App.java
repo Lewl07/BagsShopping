@@ -12,6 +12,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -45,8 +46,11 @@ public class App extends Application {
         largeBtn.setToggleGroup(group);
         
         HBox hbox = new HBox(10, smallBtn, mediumBtn, largeBtn);
+        VBox vbox = new VBox(bagList);
         
-        Scene scene = new Scene(bagList);
+        hbox.getChildren().add(vbox);
+        
+        Scene scene = new Scene(hbox);
         stage.setScene(scene);
         stage.show();
     }
